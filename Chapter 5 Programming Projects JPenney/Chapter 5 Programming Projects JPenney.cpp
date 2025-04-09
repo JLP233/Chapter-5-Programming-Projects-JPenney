@@ -3,8 +3,6 @@
 // This program calculates population growth per day over time.
 
 #include <iostream>
-#include <iomanip>
-#include <cmath>
 
 using namespace std;
 
