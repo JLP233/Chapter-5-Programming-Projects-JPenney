@@ -3,6 +3,8 @@
 // This program calculates population growth per day over time.
 
 #include <iostream>
+#include <iomanip>
+#include <cmath>
 
 using namespace std;
 
@@ -11,6 +13,7 @@ int main()
 	float StartingPopulationSize;
 	float AverageDailyPopulationIncrease;
 	float ElapsedTimeInDays;
+	float NewPopulationSize;
 
   cout << "Enter Starting Population Size:\n";
   cin >> StartingPopulationSize;
@@ -19,56 +22,28 @@ int main()
   cin >> AverageDailyPopulationIncrease;
 
   cout << "Enter Total Time Elapsed in Days:\n";
-  cin >> ElapsedTimeInDays;
+  cin >> ElapsedTimeInDays; 
 
+  if (StartingPopulationSize >= 2 && AverageDailyPopulationIncrease > 0 && ElapsedTimeInDays >= 1)
+  {
+	  NewPopulationSize = StartingPopulationSize + AverageDailyPopulationIncrease * ElapsedTimeInDays;
+	  cout << "New Population Size of:";
+	  cout << NewPopulationSize;
+  }
 
+  else
+  {
+	  cout << "Input Error.You must enter a starting population size of 2 or greater.\n";
+	  cout << "You must enter an average daily population increase greater than 0.\n";
+	  cout << "You must enter an elapsed time in days greater than or equal to 1.\n";
+	  return 1;
+  }
+
+ 
+
+  return 0;
 }
 
-#include <iostream>
-#include <iomanip>
-#include <cmath>
-
-using namespace std;
-
-
-int main()
-{
-	int FunctionChoice;
-	double AreaOfShape = 0.0f;
-	float CircleRadius;
-	float RectangleLength;
-	float RectangleWidth;
-	float TriangleBase;
-	float TriangleHeight;
-
-
-	cout << "Geometry Calculator:\n";
-	cout << "1. Calculate the Area of a Circle\n";
-	cout << "2. Calculate the Area of a Rectangle\n";
-	cout << "3. Calculate the Area of a Triangle\n";
-	cout << "4. Quit\n";
-	cout << "Enter your choice(1-4):\n";
-	cin >> FunctionChoice;
-
-
-	if (FunctionChoice == 1)
-	{
-		cout << "Calculate the Area of a Circle\n";
-		cout << "Enter circle radius:\n";
-		cin >> CircleRadius;
-		if (CircleRadius >= 0)
-		{
-			AreaOfShape = CircleRadius * CircleRadius * 3.14159;
-		}
-
-		else
-		{
-			cout << "Input Error.You must enter a positive value.\n";
-			return 1;
-		}
-	
-	return 0;
-}
 
 
 
