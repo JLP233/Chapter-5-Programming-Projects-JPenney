@@ -3,6 +3,9 @@
 // This program displays population numbers from a provided data file in a bar chart format.
 
 #include <iostream>
+#include <fstream>
+#include <string>
+#include <iomanip>
 
 using namespace std;
 
