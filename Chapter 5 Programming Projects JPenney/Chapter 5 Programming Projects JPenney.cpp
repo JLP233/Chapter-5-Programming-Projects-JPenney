@@ -16,7 +16,7 @@ int main()
         for (int i = 1; i <= row; i++) {
             cout << "+";
         }
-
+        cout << endl;
     }
   return 0;
 }
