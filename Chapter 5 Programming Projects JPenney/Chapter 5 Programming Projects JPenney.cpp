@@ -11,13 +11,19 @@ int main()
 {
 	int TotalRows = 10;
 
-    for (int row = 1; row <= TotalRows; row++) {
-        // Pattern A (increasing)
+    for (int row = 1; row <= TotalRows; row++) { 
         for (int i = 1; i <= row; i++) {
             cout << "+";
         }
         cout << endl;
     }
+    for (int row = 1; row <= TotalRows; row++) {
+        for (int i = 10; i >= row; i--) {
+            cout << "+";
+        }
+        cout << endl;
+    }
+
   return 0;
 }
 
