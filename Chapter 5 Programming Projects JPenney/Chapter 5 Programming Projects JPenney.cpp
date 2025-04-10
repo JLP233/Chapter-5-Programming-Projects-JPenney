@@ -15,10 +15,10 @@ int main()
 	string FileName;
 
 	cout << "Enter Town Name:";
-	cin >> TownName;
+	getline(cin, TownName);
 
 	cout << "Enter Data File Name:";
-	cin >> FileName;
+	getline (cin, FileName);
 
 	ifstream InputFile("FileName");
 	if (!InputFile) {
@@ -28,7 +28,7 @@ int main()
 		}
 
 	cout << TownName << "Population Growth\n";
-	cout << "(Each * represents 1,000 people)" << endl;
+	cout << "(Each * represents 1,000 people)" << endl << endl;
 
 	int year, population;
 
