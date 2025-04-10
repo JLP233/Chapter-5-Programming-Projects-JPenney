@@ -9,8 +9,15 @@ using namespace std;
 
 int main()
 {
-	
+	int TotalRows = 10;
 
+    for (int row = 1; row <= TotalRows; row++) {
+        // Pattern A (increasing)
+        for (int i = 1; i <= row; i++) {
+            cout << "+";
+        }
+
+    }
   return 0;
 }
 
