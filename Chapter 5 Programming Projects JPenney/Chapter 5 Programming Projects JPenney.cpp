@@ -18,7 +18,7 @@ int main()
 
 
     int RandomNumber = dist(gen);  
-
+     
     int GuessCount = 0;
 
     cout << "Guess the Random Number (Integer 1-999):\n";
