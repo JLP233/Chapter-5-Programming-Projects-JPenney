@@ -3,22 +3,27 @@
 // This program displays a wave pattern using "*" figures.
 
 #include <iostream>
-
+#include <random>
 
 using namespace std;
 
 int main()
 {
-	int TotalRows = 10;
+
+    random_device rd; 
+    mt19937 gen(rd()); 
+
+    uniform_int_distribution<> dist(1, 999); 
+
+
+    int randomNumber1 = dist(gen); 
+
+
+
+
 
     for (int row = 1; row <= TotalRows; row++) { 
         for (int i = 1; i <= row; i++) {
-            cout << "+";
-        }
-        cout << endl;
-    }
-    for (int row = 1; row <= TotalRows; row++) {
-        for (int i = 10; i >= row; i--) {
             cout << "+";
         }
         cout << endl;
@@ -27,6 +32,28 @@ int main()
   return 0;
 }
 
+
+
+{
+    random_device rd;
+    mt19937 gen(rd());
+
+    uniform_int_distribution<> dist(1, 999);
+
+
+    int randomNumber1 = dist(gen);
+    int randomNumber2 = dist(gen);
+
+    cout << "Solve the following equation and hit Enter to display the correct answer." << endl;
+
+    cout << randomNumber1 << "+" << randomNumber2 << "=";
+
+    cin.get();
+
+    int sum = randomNumber1 + randomNumber2;
+    cout << sum;
+
+    return 0;
 
 
 
