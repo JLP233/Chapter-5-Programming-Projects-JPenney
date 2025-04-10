@@ -19,8 +19,12 @@ int main()
 	cout << "Enter Data File Name:";
 	cin >> FileName;
 
+	ifstream InputFile("People.txt");
+	if (!InputFile) {
+		cerr << "Error. Could not access target data file.";
+		return 1;
 
-
+		}
   return 0;
 }
 
