@@ -21,10 +21,13 @@ int main()
 
 	ifstream InputFile("People.txt");
 	if (!InputFile) {
-		cerr << "Error. Could not access target data file.";
+		cerr << "Error. Could not access target data file." << endl;
 		return 1;
 
 		}
+
+	cout << TownName << "Population Growth\n";
+	cout << "(each * represents 1,000 people)" << endl;
   return 0;
 }
 
