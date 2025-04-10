@@ -1,6 +1,6 @@
 // Chapter 5 Programming Projects JPenney.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-// This program displays a wave pattern using "*" figures.
+// This program generates a random number and outputs "too high" or "too low" as you try to guess the number while also tracking number of guesses.
 
 #include <iostream>
 #include <random>
@@ -9,6 +9,7 @@ using namespace std;
 
 int main()
 {
+    int UserGuess; 
 
     random_device rd; 
     mt19937 gen(rd()); 
@@ -18,8 +19,8 @@ int main()
 
     int randomNumber1 = dist(gen); 
 
-
-
+    cout << "Guess the Random Number (Integer 1-999)";
+    cin >> UserGuess;
 
 
     for (int row = 1; row <= TotalRows; row++) { 
@@ -32,28 +33,6 @@ int main()
   return 0;
 }
 
-
-
-{
-    random_device rd;
-    mt19937 gen(rd());
-
-    uniform_int_distribution<> dist(1, 999);
-
-
-    int randomNumber1 = dist(gen);
-    int randomNumber2 = dist(gen);
-
-    cout << "Solve the following equation and hit Enter to display the correct answer." << endl;
-
-    cout << randomNumber1 << "+" << randomNumber2 << "=";
-
-    cin.get();
-
-    int sum = randomNumber1 + randomNumber2;
-    cout << sum;
-
-    return 0;
 
 
 
