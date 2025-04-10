@@ -20,21 +20,22 @@ int main()
 	cout << "Enter Data File Name:";
 	getline (cin, FileName);
 
-	ifstream InputFile("FileName");
+	ifstream InputFile(FileName);
 	if (!InputFile) {
 		cerr << "Error. Could not access target data file." << endl;
 		return 1;
 
 		}
 
-	cout << TownName << "Population Growth\n";
+	cout << TownName << " Population Growth\n";
 	cout << "(Each * represents 1,000 people)" << endl << endl;
 
-	int year, population;
+	int Year, Population;
 
-	while (InputFile >> year >> population) {
-		cout << year << " ";
-		for (int i = 0; i < population; i++) {
+	while (InputFile >> Year >> Population) { 
+		int StarCount = Population / 1000;
+		cout << setw(6) << Year << " ";
+		for (int i = 0; i < StarCount; i++) {  
 			cout << "*";
 		}
 		cout << endl;
