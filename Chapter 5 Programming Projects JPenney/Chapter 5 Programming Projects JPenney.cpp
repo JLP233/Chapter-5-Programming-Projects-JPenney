@@ -5,6 +5,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
@@ -19,7 +20,7 @@ int main()
 	cout << "Enter Data File Name:";
 	cin >> FileName;
 
-	ifstream InputFile("People.txt");
+	ifstream InputFile("FileName");
 	if (!InputFile) {
 		cerr << "Error. Could not access target data file." << endl;
 		return 1;
@@ -27,7 +28,20 @@ int main()
 		}
 
 	cout << TownName << "Population Growth\n";
-	cout << "(each * represents 1,000 people)" << endl;
+	cout << "(Each * represents 1,000 people)" << endl;
+
+	int year, population;
+
+	while (InputFile >> year >> population) {
+		cout << year << " ";
+		for (int i = 0; i < population; i++) {
+			cout << "*";
+		}
+		cout << endl;
+	}
+
+	InputFile.close();
+
   return 0;
 }
 
