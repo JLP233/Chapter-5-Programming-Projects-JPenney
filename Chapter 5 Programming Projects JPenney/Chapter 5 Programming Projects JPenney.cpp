@@ -17,18 +17,27 @@ int main()
     uniform_int_distribution<> dist(1, 999); 
 
 
-    int randomNumber1 = dist(gen); 
+    int RandomNumber = dist(gen);  
 
-    cout << "Guess the Random Number (Integer 1-999)";
-    cin >> UserGuess;
+    int GuessCount = 0;
 
+    cout << "Guess the Random Number (Integer 1-999):\n";
+    
+    do {
+        cin >> UserGuess; 
+        GuessCount++; 
 
-    for (int row = 1; row <= TotalRows; row++) { 
-        for (int i = 1; i <= row; i++) {
-            cout << "+";
+        if (UserGuess > RandomNumber) { 
+            cout << "Too high, try again." << endl;
         }
-        cout << endl;
-    }
+        else if (UserGuess < RandomNumber) { 
+            cout << "Too low, try again." << endl;
+        }
+        else {
+            cout << "You guessed the correct number." << endl;
+            cout  << GuessCount << " Total Guesses." << endl; 
+        }
+    } while (UserGuess != RandomNumber);  
 
   return 0;
 }
